@@ -4,7 +4,9 @@
 
 
 import hashlib as hasher 
-import datetime as date  
+import datetime as date 
+from menu import menu
+ 
 
 class Block:
 	def __init__(self,index,timestamp,data,previous_hash):
@@ -31,6 +33,8 @@ def next_block(last_block):
 		this_hash = last_block.hash
 		return Block(this_index, this_timestamp, this_data, this_hash)
 
+
+menu()
 
 #create the blockchain by connection all blocks together
 blockchain = [create_genesis_block()]
